@@ -1,0 +1,28 @@
+﻿<Window x:Class="oraifeladat_11._06.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:oraifeladat_11._06"
+        mc:Ignorable="d"
+        Title="Zászló Ellenőrző" Height="500" Width="450" WindowStartupLocation="CenterScreen">
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Button x:Name="TopBand" Grid.Row="0" Background="LightGray" Click="Band_Click" Margin="0,2"/>
+        <Button x:Name="MiddleBand" Grid.Row="1" Background="LightGray" Click="Band_Click" Margin="0,2"/>
+        <Button x:Name="BottomBand" Grid.Row="2" Background="LightGray" Click="Band_Click" Margin="0,2"/>
+        <StackPanel Grid.Row="3" Margin="0,15,0,5" HorizontalAlignment="Center">
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,0,0,10">
+                <Label Content="Ország neve:" VerticalAlignment="Center" FontSize="14" FontWeight="Bold"/>
+                <TextBox x:Name="CountryInput" Width="150" Height="25" VerticalContentAlignment="Center" Margin="5,0,0,0"/>
+            </StackPanel>
+            <Button Content="Ellenőrzés" Width="120" Height="30" Click="CheckButton_Click" FontWeight="Bold" Background="LightBlue"/>
+            <Label x:Name="ResultLabel" Content="" HorizontalAlignment="Center" Margin="0,10,0,0" FontSize="14" FontWeight="Bold"/>
+        </StackPanel>
+    </Grid>
+</Window>
